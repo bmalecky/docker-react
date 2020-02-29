@@ -1,10 +1,10 @@
 sudo: required
 services:
-	- docker
+  - docker
 	
 before_install:
-	- docker build -t bmalecky/docker-react -f Dockerfile.dev .
+  - docker build -t bmalecky/docker-react -f Dockerfile.dev .
 	
 script:
-	- docker run bmalecky/docker-react npm run test -- --coverage
+  - docker run bmalecky/docker-react npm run test -- --coverage
 	
